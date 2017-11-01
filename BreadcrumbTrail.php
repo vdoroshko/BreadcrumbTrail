@@ -406,37 +406,37 @@ class BreadcrumbItem
      * URL of an item
      *
      * @var    string
-     * @access public
+     * @access private
      * @since  1.0
      */
-    var $url;
+    var $_url;
 
     /**
      * Short title of an item
      *
      * @var    string
-     * @access public
+     * @access private
      * @since  1.0
      */
-    var $shortTitle;
+    var $_shortTitle;
 
     /**
      * Long title of an item
      *
      * @var    string
-     * @access public
+     * @access private
      * @since  1.0
      */
-    var $longTitle;
+    var $_longTitle;
 
     /**
      * Item description
      *
      * @var    string
-     * @access public
+     * @access private
      * @since  1.0
      */
-    var $description;
+    var $_description;
 
     // }}}
     // {{{ constructor
@@ -452,10 +452,10 @@ class BreadcrumbItem
      */
     function BreadcrumbItem($url, $shortTitle = '', $longTitle = '', $description = '')
     {
-        $this->url         = (string)$url;
-        $this->shortTitle  = (string)$shortTitle;
-        $this->longTitle   = (string)$longTitle;
-        $this->description = (string)$description;
+        $this->_url         = (string)$url;
+        $this->_shortTitle  = (string)$shortTitle;
+        $this->_longTitle   = (string)$longTitle;
+        $this->_description = (string)$description;
     }
 
     // }}}
@@ -470,7 +470,7 @@ class BreadcrumbItem
      */
     function getURL()
     {
-        return $this->url;
+        return $this->_url;
     }
 
     // }}}
@@ -486,7 +486,7 @@ class BreadcrumbItem
      */
     function setURL($url)
     {
-        $this->url = (string)$url;
+        $this->_url = (string)$url;
     }
 
     // }}}
@@ -501,7 +501,7 @@ class BreadcrumbItem
      */
     function getShortTitle()
     {
-        return $this->shortTitle;
+        return $this->_shortTitle;
     }
 
     // }}}
@@ -517,7 +517,7 @@ class BreadcrumbItem
      */
     function setShortTitle($shortTitle)
     {
-        $this->shortTitle = (string)$shortTitle;
+        $this->_shortTitle = (string)$shortTitle;
     }
 
     // }}}
@@ -532,7 +532,7 @@ class BreadcrumbItem
      */
     function getLongTitle()
     {
-        return $this->longTitle;
+        return $this->_longTitle;
     }
 
     // }}}
@@ -548,7 +548,7 @@ class BreadcrumbItem
      */
     function setLongTitle($longTitle)
     {
-        $this->longTitle = (string)$longTitle;
+        $this->_longTitle = (string)$longTitle;
     }
 
     // }}}
@@ -563,7 +563,7 @@ class BreadcrumbItem
      */
     function getDescription()
     {
-        return $this->descrption;
+        return $this->_descrption;
     }
 
     // }}}
@@ -579,7 +579,7 @@ class BreadcrumbItem
      */
     function setDescription($description)
     {
-        $this->description = (string)$description;
+        $this->_description = (string)$description;
     }
 
     // }}}
@@ -602,7 +602,7 @@ class BreadcrumbItem
             return BreadcrumbTrail::raiseError(BREADCRUMBTRAIL_ERROR_INVALID_ITEM);
         }
 
-        return $this->url == $breadcrumbItem->getURL();
+        return $this->_url == $breadcrumbItem->getURL();
     }
 
     // }}}
