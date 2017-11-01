@@ -6,7 +6,7 @@
  *
  * PHP version 4
  *
- * Copyright (c) 2005-2016, Vitaly Doroshko
+ * Copyright (c) 2005-2017, Vitaly Doroshko
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -38,7 +38,7 @@
  * @category   HTML
  * @package    BreadcrumbTrail
  * @author     Vitaly Doroshko <vdoroshko@mail.ru>
- * @copyright  2005-2016 Vitaly Doroshko
+ * @copyright  2005-2017 Vitaly Doroshko
  * @license    http://opensource.org/licenses/BSD-3-Clause
  *             BSD 3-Clause License
  * @version    1.0
@@ -77,7 +77,7 @@ define('BREADCRUMBTRAIL_ERROR_EMPTY', -3);
  * @category   HTML
  * @package    BreadcrumbTrail
  * @author     Vitaly Doroshko <vdoroshko@mail.ru>
- * @copyright  2005-2016 Vitaly Doroshko
+ * @copyright  2005-2017 Vitaly Doroshko
  * @license    http://opensource.org/licenses/BSD-3-Clause
  *             BSD 3-Clause License
  * @link       https://github.com/vdoroshko/BreadcrumbTrail
@@ -392,7 +392,7 @@ class BreadcrumbTrail
  * @category   HTML
  * @package    BreadcrumbTrail
  * @author     Vitaly Doroshko <vdoroshko@mail.ru>
- * @copyright  2005-2016 Vitaly Doroshko
+ * @copyright  2005-2017 Vitaly Doroshko
  * @license    http://opensource.org/licenses/BSD-3-Clause
  *             BSD 3-Clause License
  * @link       https://github.com/vdoroshko/BreadcrumbTrail
@@ -459,6 +459,130 @@ class BreadcrumbItem
     }
 
     // }}}
+    // {{{ getURL()
+
+    /**
+     * Returns the URL of an item
+     *
+     * @return string  The URL of an item
+     * @access public
+     * @since  1.0
+     */
+    function getURL()
+    {
+        return $this->url;
+    }
+
+    // }}}
+    // {{{ setURL()
+
+    /**
+     * Sets the URL of an item
+     *
+     * @param  string  $url The URL of an item
+     * @return void
+     * @access public
+     * @since  1.0
+     */
+    function setURL($url)
+    {
+        $this->url = (string)$url;
+    }
+
+    // }}}
+    // {{{ getTitle()
+
+    /**
+     * Returns the title of an item
+     *
+     * @return string  The title of an item
+     * @access public
+     * @since  1.0
+     */
+    function getTitle()
+    {
+        return $this->title;
+    }
+
+    // }}}
+    // {{{ setTitle()
+
+    /**
+     * Sets the title of an item
+     *
+     * @param  string  $title The title of an item
+     * @return void
+     * @access public
+     * @since  1.0
+     */
+    function setTitle($title)
+    {
+        $this->title = (string)$title;
+    }
+
+    // }}}
+    // {{{ getLongTitle()
+
+    /**
+     * Returns the long title of an item
+     *
+     * @return string  The long title of an item
+     * @access public
+     * @since  1.0
+     */
+    function getLongTitle()
+    {
+        return $this->longTitle;
+    }
+
+    // }}}
+    // {{{ setLongTitle()
+
+    /**
+     * Sets the long title of an item
+     *
+     * @param  string  $longTitle The long title of an item
+     * @return void
+     * @access public
+     * @since  1.0
+     */
+    function setLongTitle($longTitle)
+    {
+        $this->longTitle = (string)$longTitle;
+    }
+
+    // }}}
+    // {{{ getDescription()
+
+    /**
+     * Returns the description of an item
+     *
+     * @return string  The description of an item
+     * @access public
+     * @since  1.0
+     */
+    function getDescription()
+    {
+        return $this->descrption;
+    }
+
+    // }}}
+    // {{{ setDescription()
+
+    /**
+     * Sets the description of an item
+     *
+     * @param  string  $description The descriptions of an item
+     * @return void
+     * @access public
+     * @since  1.0
+     */
+    function setDescription($description)
+    {
+        $this->description = (string)$description;
+    }
+
+    // }}}
     // {{{ equals()
 
     /**
@@ -478,7 +602,7 @@ class BreadcrumbItem
             return BreadcrumbTrail::raiseError(BREADCRUMBTRAIL_ERROR_INVALID_ITEM);
         }
 
-        return $this->url == $breadcrumbItem->url;
+        return $this->url == $breadcrumbItem->getURL();
     }
 
     // }}}
@@ -493,7 +617,7 @@ class BreadcrumbItem
  * @category   HTML
  * @package    BreadcrumbTrail
  * @author     Vitaly Doroshko <vdoroshko@mail.ru>
- * @copyright  2005-2016 Vitaly Doroshko
+ * @copyright  2005-2017 Vitaly Doroshko
  * @license    http://opensource.org/licenses/BSD-3-Clause
  *             BSD 3-Clause License
  * @link       https://github.com/vdoroshko/BreadcrumbTrail
