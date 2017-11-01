@@ -412,13 +412,13 @@ class BreadcrumbItem
     var $url;
 
     /**
-     * Title of an item
+     * Short title of an item
      *
      * @var    string
      * @access public
      * @since  1.0
      */
-    var $title;
+    var $shortTitle;
 
     /**
      * Long title of an item
@@ -445,15 +445,15 @@ class BreadcrumbItem
      * Constructs a new BreadcrumbItem object
      *
      * @param  string  $url The URL of the item
-     * @param  string  $title (optional) The title of the item
-     * @param  string  $longTitle (optional) The long title of the item
+     * @param  string  $shortTitle (optional) The short title of an item
+     * @param  string  $longTitle (optional) The long title of an item
      * @param  string  $description (optional) The item description
      * @access public
      */
-    function BreadcrumbItem($url, $title = '', $longTitle = '', $description = '')
+    function BreadcrumbItem($url, $shortTitle = '', $longTitle = '', $description = '')
     {
         $this->url         = (string)$url;
-        $this->title       = (string)$title;
+        $this->shortTitle  = (string)$shortTitle;
         $this->longTitle   = (string)$longTitle;
         $this->description = (string)$description;
     }
@@ -490,34 +490,34 @@ class BreadcrumbItem
     }
 
     // }}}
-    // {{{ getTitle()
+    // {{{ getShortTitle()
 
     /**
-     * Returns the title of an item
+     * Returns the short title of an item
      *
-     * @return string  The title of an item
+     * @return string  The short title of an item
      * @access public
      * @since  1.0
      */
-    function getTitle()
+    function getShortTitle()
     {
-        return $this->title;
+        return $this->shortTitle;
     }
 
     // }}}
-    // {{{ setTitle()
+    // {{{ setShortTitle()
 
     /**
-     * Sets the title of an item
+     * Sets the short title of an item
      *
-     * @param  string  $title The title of an item
+     * @param  string  $shortTitle The short title of an item
      * @return void
      * @access public
      * @since  1.0
      */
-    function setTitle($title)
+    function setShortTitle($shortTitle)
     {
-        $this->title = (string)$title;
+        $this->shortTitle = (string)$shortTitle;
     }
 
     // }}}
