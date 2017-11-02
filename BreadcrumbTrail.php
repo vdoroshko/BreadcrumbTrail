@@ -563,7 +563,7 @@ class BreadcrumbItem
      */
     function getDescription()
     {
-        return $this->_descrption;
+        return $this->_description;
     }
 
     // }}}
