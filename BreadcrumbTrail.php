@@ -631,15 +631,12 @@ class BreadcrumbTrail_Error extends PEAR_Error
      * Constructs a new BreadcrumbTrail_Error object
      *
      * @param  integer $code The error code
-     * @param  integer $mode (optional) The error mode
-     * @param  mixed   $level (optional) The error level
-     * @param  string  $debuginfo (optional) Additional debug info
      * @access public
      * @see    PEAR_Error
      */
-    function BreadcrumbTrail_Error($code, $mode = null, $level = null, $debuginfo = null)
+    function BreadcrumbTrail_Error($code)
     {
-        $this->PEAR_Error('BreadcrumbTrail Error: ' . BreadcrumbTrail::errorMessage($code), (integer)$code, $mode, $level, $debuginfo);
+        $this->PEAR_Error('BreadcrumbTrail Error: ' . BreadcrumbTrail::errorMessage($code), $code);
     }
 
     // }}}
