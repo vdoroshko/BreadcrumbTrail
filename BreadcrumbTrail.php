@@ -354,7 +354,7 @@ class BreadcrumbTrail
     }
 
     // }}}
-    // {{{ errorMessage()
+    // {{{ getErrorMessage()
 
     /**
      * Returns a textual error message for an error code
@@ -365,7 +365,7 @@ class BreadcrumbTrail
      * @static
      * @since  1.0
      */
-    function errorMessage($code)
+    function getErrorMessage($code)
     {
         static $errorMessages;
 
@@ -636,7 +636,7 @@ class BreadcrumbTrail_Error extends PEAR_Error
      */
     function BreadcrumbTrail_Error($code)
     {
-        $this->PEAR_Error('BreadcrumbTrail Error: ' . BreadcrumbTrail::errorMessage($code), $code);
+        $this->PEAR_Error('BreadcrumbTrail Error: ' . BreadcrumbTrail::getErrorMessage($code), $code);
     }
 
     // }}}
