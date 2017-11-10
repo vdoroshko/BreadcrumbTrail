@@ -6,7 +6,7 @@
  *
  * PHP version 4
  *
- * Copyright (c) 2005-2017, Vitaly Doroshko
+ * Copyright (c) 2005-2017 Vitaly Doroshko.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
