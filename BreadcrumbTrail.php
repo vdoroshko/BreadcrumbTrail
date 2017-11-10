@@ -377,7 +377,7 @@ class BreadcrumbTrail
             );
         }
 
-        return isset($errorMessages[(integer)$code]) ? $errorMessages[(integer)$code] : $errorMessages[BREADCRUMBTRAIL_ERROR];
+        return array_key_exists((integer)$code, $errorMessages) ? $errorMessages[(integer)$code] : $errorMessages[BREADCRUMBTRAIL_ERROR];
     }
 
     // }}}
